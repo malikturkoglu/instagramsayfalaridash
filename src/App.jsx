@@ -26,8 +26,8 @@ function App() {
       <Routes>
       <Route exact path="/giris" element={<Signin />} />
         <Route exact path="/instagramsayfalaridash/" element={auth.currentUser ? <SayfaYukleme /> : <Signin />} />
-        <Route exact path="/category" element={<CategoryAdd />} />
-        <Route exact path="/sayfa-yukleme" element={<SayfaYukleme />} />
+        <Route exact path="instagramsayfalaridash/category" element={<CategoryAdd />} />
+        <Route exact path="instagramsayfalaridash/sayfa-yukleme" element={<SayfaYukleme />} />
       </Routes>
     </>
   );

@@ -33,7 +33,7 @@ export default function SignIn() {
             <h1 className="h1 text-white">Panele Giriş</h1>
           </div>
           {user && (
-          <Navigate to="/insta-dash/" replace={true} />
+          <Navigate to="/instagramsayfalaridash/" replace={true} />
         )}
           {/* Form */}
           <div className="max-w-sm mx-auto">
