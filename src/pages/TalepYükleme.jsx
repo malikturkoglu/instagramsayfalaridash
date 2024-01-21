@@ -112,16 +112,16 @@ function RegisterInstagramPageForm() {
 
         <main className="dark:bg-gray-800">
 
-            <form onSubmit={handleSubmit} className="max-w-xl mx-auto">
+            <form onSubmit={handleSubmit} className="max-w-xl mx-auto p-7">
                 <div className="flex flex-wrap -mx-3 mb-4 mt-10">
                     <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
                         <label className="block text-gray-800 dark:text-gray-200 text-sm font-medium mb-1" htmlFor="Instagram Sayfa ismi">Instagram Sayfa ismi<span className="text-red-600">*</span></label>
-                        <input id="Instagram Sayfa ismi" type="text" className="form-input w-full text-gray-800 dark:bg-gray-700 dark:text-gray-300" placeholder="Enter Costumer Name" value={name} onChange={(e) => setName(e.target.value)} />
+                        <input id="Instagram Sayfa ismi" type="text" className="form-input w-full text-gray-800 dark:bg-gray-700 dark:text-gray-300" value={name} onChange={(e) => setName(e.target.value)} />
                     </div>
 
                     <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
                         <label className="block text-gray-800 dark:text-gray-200 text-sm font-medium mb-1" htmlFor="Instagram Adresi">Instagram Adresi<span className="text-red-600">*</span></label>
-                        <input id="Instagram Adresi" type="text" className="form-input w-full text-gray-800 dark:bg-gray-700 dark:text-gray-300" placeholder="Enter Costumer Company Name" value={address} onChange={(e) => setAddress(e.target.value)} />
+                        <input id="Instagram Adresi" type="text" className="form-input w-full text-gray-800 dark:bg-gray-700 dark:text-gray-300" placeholder="@" value={address} onChange={(e) => setAddress(e.target.value)} />
                     </div>
                 </div>
 
@@ -139,7 +139,7 @@ function RegisterInstagramPageForm() {
 
                     <div className="w-full px-3 mb-4 md:mb-0">
                         <label className="block text-gray-800 dark:text-gray-200 text-sm font-medium mb-1" htmlFor="followers">Takipçi</label>
-                        <input id="followers" className="form-input w-full text-gray-800 dark:bg-gray-700 dark:text-gray-300" type="number" value={followers} onChange={(e) => setFollowers(e.target.value)} placeholder="followers" />
+                        <input id="followers" className="form-input w-full text-gray-800 dark:bg-gray-700 dark:text-gray-300" type="number" value={followers} onChange={(e) => setFollowers(e.target.value)} placeholder="+" />
                     </div>
                 </div>
 
