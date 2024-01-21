@@ -11,7 +11,7 @@ export default defineConfig({
     postcss,
   },
   plugins: [react()],
-  base: "/insta-dash/",
+  base: "/instagramsayfalaridash/",
   resolve: {
     alias: [
       {
