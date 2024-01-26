@@ -10,7 +10,7 @@ function RegisterInstagramPageForm() {
   const [name, setName] = useState('');
   const [address, setAddress] = useState('');
   const [followers, setFollowers] = useState();
-  const [prices, setPrices] = useState({ post: '', story: '', all: '' }); // New state for prices
+  const [prices, setPrices] = useState({  story: '', post: '', all: '' }); // New state for prices
   const [images, setImages] = useState([]);
 
 
@@ -116,12 +116,12 @@ function RegisterInstagramPageForm() {
                 <div className="flex flex-wrap -mx-3 mb-4 mt-10">
                     <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
                         <label className="block text-gray-800 dark:text-gray-200 text-sm font-medium mb-1" htmlFor="Instagram Sayfa ismi">Instagram Sayfa ismi<span className="text-red-600">*</span></label>
-                        <input id="Instagram Sayfa ismi" type="text" className="form-input w-full text-gray-800 dark:bg-gray-700 dark:text-gray-300" value={name} onChange={(e) => setName(e.target.value)} />
+                        <input id="Instagram Sayfa ismi" type="text" className="form-input w-full text-gray-800 dark:bg-gray-700 dark:text-gray-300" value={name} onChange={(e) => setName(e.target.value)} required/>
                     </div>
 
                     <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
                         <label className="block text-gray-800 dark:text-gray-200 text-sm font-medium mb-1" htmlFor="Instagram Adresi">Instagram Adresi<span className="text-red-600">*</span></label>
-                        <input id="Instagram Adresi" type="text" className="form-input w-full text-gray-800 dark:bg-gray-700 dark:text-gray-300" placeholder="@" value={address} onChange={(e) => setAddress(e.target.value)} />
+                        <input id="Instagram Adresi" type="text" className="form-input w-full text-gray-800 dark:bg-gray-700 dark:text-gray-300" placeholder="@" value={address} onChange={(e) => setAddress(e.target.value)} required/>
                     </div>
                 </div>
 
@@ -131,6 +131,7 @@ function RegisterInstagramPageForm() {
         type="file" 
         multiple 
         onChange={(e) => setImages(e.target.files)}
+        required
       />
                 </div>
 
@@ -139,7 +140,7 @@ function RegisterInstagramPageForm() {
 
                     <div className="w-full px-3 mb-4 md:mb-0">
                         <label className="block text-gray-800 dark:text-gray-200 text-sm font-medium mb-1" htmlFor="followers">Takipçi</label>
-                        <input id="followers" className="form-input w-full text-gray-800 dark:bg-gray-700 dark:text-gray-300" type="number" value={followers} onChange={(e) => setFollowers(e.target.value)} placeholder="+" />
+                        <input id="followers" className="form-input w-full text-gray-800 dark:bg-gray-700 dark:text-gray-300" type="number" value={followers} onChange={(e) => setFollowers(e.target.value)} placeholder="+" required />
                     </div>
                 </div>
 
@@ -148,17 +149,17 @@ function RegisterInstagramPageForm() {
 
         <div className="px-3">
         <label className="block text-sm font-medium mb-1" htmlFor="Hikaye">Hikaye</label>
-            <input  className="form-input w-full" id="story" type="number" placeholder="hikaye" value={prices.story} onChange={(e) => setPrices({ ...prices, story: e.target.value })} />
+            <input  className="form-input w-full" id="story" type="number" placeholder="hikaye" value={prices.story} onChange={(e) => setPrices({ ...prices, story: e.target.value })} required/>
         </div>
 
         <div className="  px-3">
         <label className=" block text-sm font-medium mb-1" htmlFor="post">Post</label>
-            <input className="form-input w-full" id="post" type="number" placeholder="post" value={prices.post} onChange={(e) => setPrices({ ...prices, post: e.target.value })} />
+            <input className="form-input w-full" id="post" type="number" placeholder="post" value={prices.post} onChange={(e) => setPrices({ ...prices, post: e.target.value })} required/>
         </div>
 
         <div className="px-3">
         <label className="block text-sm font-medium mb-1" htmlFor="all">Hepsi</label>
-            <input className="form-input w-full" id="all" type="number" placeholder="Hepsi" value={prices.all} onChange={(e) => setPrices({ ...prices, all: e.target.value })} />
+            <input className="form-input w-full" id="all" type="number" placeholder="Hepsi" value={prices.all} onChange={(e) => setPrices({ ...prices, all: e.target.value })} required/>
         </div>
 
     </div>
@@ -175,6 +176,7 @@ function RegisterInstagramPageForm() {
                             value={category.name}
                             checked={selectedCategories.includes(category.name)}
                             onChange={() => handleCategoryChange(category.name)}
+                            required
                         />
                        <span className="text-sm ml-0.5">{category.name}</span> 
                     </label>
