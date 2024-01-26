@@ -176,7 +176,6 @@ function RegisterInstagramPageForm() {
                             value={category.name}
                             checked={selectedCategories.includes(category.name)}
                             onChange={() => handleCategoryChange(category.name)}
-                            required
                         />
                        <span className="text-sm ml-0.5">{category.name}</span> 
                     </label>
